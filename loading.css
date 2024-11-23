@@ -1,0 +1,133 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@import url('https://fonts.cdnfonts.com/css/minecraft-3');
+
+body {
+    background-color: black;
+}
+
+.text {
+    font-size: 30px;
+    margin-top: 190px;
+    width: 500px;
+    display: flex;
+    font-family: 'Minecraft', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.loading {
+    font-size: 50px;
+    color: white;
+    width: 500px;
+    display: flex;
+    margin-left: 575px;
+    font-family: 'Minecraft', sans-serif;
+}
+
+#faq {
+    font-size: 150%;
+    font-weight: bold;
+    color: rgb(31, 31, 31);
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+
+
+.spinner {
+    --size: 50px;
+    margin-top: 200px;
+    --first-block-clr: #008cff;
+    --second-block-clr: #00c3fe;
+    --clr: #111;
+    width: 1350px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.spinner::after,
+.spinner::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    width: var(--size);
+    height: var(--size);
+    top: 50%;
+    animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+    left: 50%;
+    background: var(--first-block-clr);
+}
+
+.spinner::after {
+    background: var(--second-block-clr);
+    top: calc(50% - var(--size));
+    left: calc(50% - var(--size));
+    animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+}
+
+@keyframes down {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    25% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(100%) translateY(100%);
+    }
+
+    75% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes up {
+
+    0%,
+    100% {
+        transform: none;
+    }
+
+    25% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-100%) translateY(-100%);
+    }
+
+    75% {
+        transform: translateY(-100%);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    .spinner {
+        --size: 140px;
+        margin-top: 700px;
+        margin-left: 720px;
+        --first-block-clr: #008cff;
+        --second-block-clr: #00c3fe;
+        --clr: #111;
+        width: 1px;
+        height: 100px;
+        position: relative;
+    }
+
+    .text {
+        font-size: 320%;
+        width: 1000px;
+        margin-top: 750px;
+    }
+
+    .loading {
+        font-size: 640%;
+        margin-top: 200px;
+        margin-left: 500px;
+    }
+}
